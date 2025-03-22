@@ -6,6 +6,10 @@ project(
   LANGUAGES C
 )
 
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED YES)
+set(CMAKE_C_EXTENSIONS NO)
+
 add_subdirectory(lib)
 add_subdirectory(include)
 add_subdirectory(exe)
