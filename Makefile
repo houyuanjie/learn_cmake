@@ -2,6 +2,7 @@ SOURCE_DIR = .
 BUILD_DIR = build
 CMAKE = cmake
 CMAKE_GENERATOR = -G Ninja
+CMAKE_VARIABLES = -DBUILD_EXE=YES
 
 .PHONY: default help prepare configure build clean
 
@@ -17,7 +18,7 @@ prepare:
 	@mkdir -p $(BUILD_DIR)
 
 configure: prepare
-	$(CMAKE) -S $(SOURCE_DIR) -B $(BUILD_DIR) $(CMAKE_GENERATOR)
+	$(CMAKE) -S $(SOURCE_DIR) -B $(BUILD_DIR) $(CMAKE_GENERATOR) $(CMAKE_VARIABLES)
 
 build:
 	$(CMAKE) --build $(BUILD_DIR)

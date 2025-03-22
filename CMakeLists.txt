@@ -10,6 +10,13 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED YES)
 set(CMAKE_C_EXTENSIONS NO)
 
+option(BUILD_EXE "Build executables." NO)
+
 add_subdirectory(lib)
 add_subdirectory(include)
-add_subdirectory(exe)
+
+if (BUILD_EXE)
+  add_subdirectory(exe)
+else()
+  message("[INFO] Executables disabled. Enable with -DBUILD_EXE=YES")
+endif()
