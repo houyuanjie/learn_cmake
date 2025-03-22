@@ -5,7 +5,7 @@ Learn CMake
   sudo apt install build-essential make cmake gdb ninja-build ccache
 
 1. Configuare
-  cmake -S . -B build
+  cmake -S . -B build -G Ninja
 
 2. Build
   cmake --build build
