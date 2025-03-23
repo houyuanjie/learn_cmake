@@ -12,3 +12,8 @@ Learn CMake
 
 3. Run
   ./build/exe/main
+
+----------------------------------------
+
+To quick clean compile:
+  make clean && make configure && make
