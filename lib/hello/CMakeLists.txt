@@ -1,1 +1,1 @@
-add_library(hello STATIC hello.c)
+add_library(hello SHARED hello.c)
